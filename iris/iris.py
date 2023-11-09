@@ -19,7 +19,7 @@ x=iris_data.loc[:, ["SepalLength", "SepalWidth", "PetalLength", "PetalWidth"]]
 print(f'y.unique():{y.unique()}')
 label_list=[]
 for name in y.unique():
-    count=len(y==name)
+    count=len(y[y==name])
     print(f'y label name: {name}, count:{count}')
     label_list.append(name)
 print(f'label_list:{label_list}')
